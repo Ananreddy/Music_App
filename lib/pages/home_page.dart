@@ -10,7 +10,15 @@ import 'package:flutter/material.dart';
  class _HomePageState extends State<Homepage> {
       @override
       Widget build(BuildContext context) {
-        return Scaffold();
+        return Scaffold(
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          appBar:AppBar(
+          title:Text("P L A Y L I S T"),
+          centerTitle:true,
+          
+          ),
+          drawer: Drawer(),
+        );
       }
 
  }        
