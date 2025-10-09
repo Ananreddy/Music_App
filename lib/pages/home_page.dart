@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/components/drawer.dart';
  
  class Homepage extends StatefulWidget{
          const Homepage({super.key});
@@ -17,8 +18,7 @@ import 'package:flutter/material.dart';
           centerTitle:true,
           
           ),
-          drawer: Drawer(),
+          drawer: MyDrawer(),
         );
       }
-
  }        
