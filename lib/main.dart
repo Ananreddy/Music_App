@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/models/playlist_provider.dart';
 import 'pages/home_page.dart';
 /*import 'package:music_app/themes/dark_mode.dart';
 import 'package:music_app/themes/light_mode.dart';
@@ -10,10 +11,17 @@ import 'package:music_app/themes/theme_provider.dart';
 
 void main() {
   runApp(
-     ChangeNotifierProvider(
+    /*ChangeNotifierProvider(
          create: (context) => ThemeProvider(), // removed runApp(const MyApp());
          child: const MyApp(),
          ),
+    */     
+    MultiProvider(providers:[
+          ChangeNotifierProvider(create: (context) => ThemeProvider()    ),
+          ChangeNotifierProvider(create: (context) => PlaylistProvider() ),
+          ],
+          child: const MyApp(),
+    ), 
   );    
 }        
 
